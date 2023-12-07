@@ -46,7 +46,7 @@
 
 .menu .menuItem:last-child {
     position: absolute;
-    bottom: 0rem;
+    bottom: 2rem;
     width: 100%;
 }
 
