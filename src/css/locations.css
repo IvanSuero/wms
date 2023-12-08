@@ -1,20 +1,29 @@
-.products {
+.locations {
     align-items: center;
     margin: 3rem auto auto 3rem;
 }
 
-.productComponents {
+.locationComponents {
     display: flex;
     flex-direction: row;
     gap: 2rem;
     align-items: start;
 }
 
-.table-container {
+.table-container-locations {
     overflow-x: scroll;
     overflow-y: scroll;
     height: 65vh;
-    width: 60vw;
+    width: 45vw;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+}
+
+.table-container-items{
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 40vh;
+    width: 30vw;
     border-radius: 10px;
     box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
 }
@@ -75,7 +84,7 @@ tr.selected{
     background-color: lightcyan;
 }
 
-.product-buttons {
+.location-buttons {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -84,7 +93,7 @@ tr.selected{
     border-bottom: 1px solid black;
 }
 
-.product-buttons button {
+.location-buttons button {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -97,53 +106,7 @@ tr.selected{
     border-radius: 10px;
 }
 
-.product-buttons button:hover {
+.location-buttons button:hover {
     background-color: lightgreen;
     cursor: pointer;
 }
-
-.filters {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.filter_input {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: end;
-}
-
-.filter_input input {
-    border-radius: 5px;
-    border: 2px solid lightgray;
-    height: 1.5rem;
-}
-
-.filter_input select {
-    border-radius: 5px;
-    border: 2px solid lightgray;
-    width: 11rem;
-}
-
-.filter_input select option {
-    border: 1px solid lightgray;
-    padding: 5px;
-    width: 11rem;
-}
-
-input[type="submit"] {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 100%;
-    height: 2rem;
-}
-
-input[type="submit"]:hover {
-    background-color: lightskyblue;
-    cursor: pointer;
-}
-

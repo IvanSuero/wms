@@ -1,11 +1,12 @@
 import { Sidebar } from "../Sidebar";
+import { LocationsView } from "../locations/LocationsView";
 
 export const Locations = () => {
     return (
         <div className="App">
             <div className="AppGlass">
                 <Sidebar />
-                <h1>Locations</h1>
+                <LocationsView />
             </div>
         </div>
     )

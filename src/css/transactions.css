@@ -1,9 +1,9 @@
-.products {
+.transactions {
     align-items: center;
     margin: 3rem auto auto 3rem;
 }
 
-.productComponents {
+.transactionComponents {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -16,7 +16,6 @@
     height: 65vh;
     width: 60vw;
     border-radius: 10px;
-    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
 }
 
 table{
@@ -24,7 +23,6 @@ table{
     border-spacing: 0;
     width: 100%;
     border: 2px solid lightgray;
-    border-radius: 20px;
 }
 
 thead {
@@ -75,7 +73,7 @@ tr.selected{
     background-color: lightcyan;
 }
 
-.product-buttons {
+.transaction-buttons {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -84,7 +82,7 @@ tr.selected{
     border-bottom: 1px solid black;
 }
 
-.product-buttons button {
+.transaction-buttons button {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -97,7 +95,7 @@ tr.selected{
     border-radius: 10px;
 }
 
-.product-buttons button:hover {
+.transaction-buttons button:hover {
     background-color: lightgreen;
     cursor: pointer;
 }

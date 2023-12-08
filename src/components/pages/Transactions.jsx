@@ -1,11 +1,12 @@
 import { Sidebar } from "../Sidebar";
+import { TransactionsView } from "../transactions/TransactionsView";
 
 export const Transactions = () => {
     return (
         <div className="App">
             <div className="AppGlass">
                 <Sidebar />
-                <h1>Transactions</h1>
+                <TransactionsView />
             </div>
         </div>
     )
