@@ -1,14 +1,12 @@
 import { Sidebar } from "../Sidebar";
-import { ProductsTable } from "../products/ProductsTable";
-import { FilterProducts } from "../products/FilterProducts";
+import { ProductsView } from "../products/ProductsView";
 
 export const Products = () => {
     return (
         <div className="App">
             <div className="AppGlass">
                 <Sidebar />
-                <ProductsTable />
-                <FilterProducts />
+                <ProductsView />
             </div>
         </div>
     )

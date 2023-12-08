@@ -1,14 +1,14 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { UilBars, UilSignOutAlt } from '@iconscout/react-unicons'
 import {SidebarData} from "../Data/Data"
 import {motion} from "framer-motion"
 import '../css/Sidebar.css'
 import { Link } from "react-router-dom"
+import { SidebarContext } from "../App"
 
 
 export const Sidebar = () => {
-    const [selected, setSelected] = useState(0)
-
+    const {sidebar, setSidebar} = useContext(SidebarContext);
     const [expanded, setExpanded] = useState(true)
 
     const sidebarVariants = {
@@ -17,7 +17,7 @@ export const Sidebar = () => {
     }
 
     const sidebarClick = async ({index}) => {
-        await setSelected(index)
+        await setSidebar(index);
     }
 
     return (
@@ -35,7 +35,7 @@ export const Sidebar = () => {
                     {SidebarData.map((item, index) => {
                         return (
                             <Link 
-                                className={selected === index ? "menuItem active" : "menuItem"}
+                                className={sidebar === index ? "menuItem active" : "menuItem"}
                                 key={index}
                                 onClick={()=>sidebarClick({index})}
                                 to={`/${item.heading}`}

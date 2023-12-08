@@ -1,4 +1,4 @@
-import { UilEstate, UilClipboardAlt, UilPackage, UilChart, UilMapMarker, UilArrowCircleRight } from '@iconscout/react-unicons'
+import { UilEstate, UilClipboardAlt, UilPackage, UilMapMarker, UilArrowCircleRight } from '@iconscout/react-unicons'
 import { UilUsdSquare, UilMoneyWithdrawal } from '@iconscout/react-unicons'
 
 export const SidebarData = [
@@ -21,10 +21,6 @@ export const SidebarData = [
     {
       icon: UilArrowCircleRight,
       heading: 'Actions'
-    },
-    {
-      icon: UilChart,
-      heading: 'Analytics'
     },
   ];
 
