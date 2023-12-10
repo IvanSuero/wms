@@ -1,0 +1,38 @@
+.actions{
+    padding-top: 3rem;
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.cards {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1.5rem;
+    gap: 2rem;
+    height: 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card:hover {
+    border: 1px solid #333;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .cardText h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+  }
