@@ -1,10 +1,20 @@
 import { UilSort } from '@iconscout/react-unicons'
-import {ProductsData} from '../../Data/ProductsData.js'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 export const ProductsTable = () => {
-
     const [selected, setSelected] = useState(false);
+    const [data, setData] = useState('');
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/api/data')
+            .then(res => {
+                setData(res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }, [])
 
     const clickRowProduct = (index) => async() => {
         await setSelected(index);
@@ -48,14 +58,14 @@ export const ProductsTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {ProductsData.map((item, index) => {
+                    {data.products && data.products.map((product, index) => {
                         return (
-                            <tr key={index} className={selected === index ? 'selected' : ''} onClick={clickRowProduct(index)}>
-                                <td>{item.reference}</td>
-                                <td>{item.product}</td>
-                                <td>{item.stock}</td>
-                                <td>{item.category}</td>
-                                <td>{item.location}</td>
+                            <tr key={index} onClick={clickRowProduct(index)} className={selected === index ? "selected" : ""}>
+                                <td>{product.reference}</td>
+                                <td>{product.product}</td>
+                                <td>{product.stock}</td>
+                                <td>{product.category}</td>
+                                <td>{product.location}</td>
                             </tr>
                         )
                     })}

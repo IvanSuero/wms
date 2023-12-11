@@ -1,3 +1,18 @@
+import axios from 'axios'
+
+export function getProductsData() {
+    axios.get('/api/data')
+    .then((res) => {
+        console.log(res.data)
+        return res.data
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
+
+
+/*
 export const ProductsData = [
     {
         reference: '0001',
@@ -230,4 +245,4 @@ export const ProductsData = [
         category: 'Category 1',
         location: 'Location 1',
     },
-]
+]*/
